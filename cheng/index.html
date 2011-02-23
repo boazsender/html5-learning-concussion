@@ -3,49 +3,40 @@
 <head>
   <title>HTML5 Learning Explosion</title>
   <style>
-    .fancy {
-      font-style:italic;
-      font-family: georgia;
-      font-weight: normal;
-      color: #333;
+    p {
+      width: 600px;
+      margin: 0 auto 0 auto;   /* center */
+    }
+  
+    input[type="text"] {
+      border: 1px solid #c2c2c2;
+      padding: 10px;
+      -webkit-border-radius: 12px;  /* vendor specific implementation.  you need to do for mozilla, ie..all major browsers */
+      -moz-border-radius:12px;      
     }
     
-    #importance {
-      line-height: 2;
-      word-spacing: 10px;
+    .text:focus{
+      -webkit-box-shadow: 1px 1px 4px #333 inset;
+      -moz-box-shadow: 1px 1px 4px #333 inset;
+      -o-box-shadow: 1px 1px 4px #333 inset;
+      box-shadow: 1px 1px 4px #333 inset;
     }
     
-    a{
-      text-decoration:none;
-      color: #009;
-      -webkit-transition-properties: color;
-      -webkit-transition: .2s all;
-      -moz-transition: .2s all;  // for firefox
-    }
-    a:hover{
-      font-size: 200px;
-    }
-    
-    a.fancy:hover{
-      /* only a with class 'fancy' has this hover */
-    }
-    a[fancy]:hover{
-      /* attribute selector    e.g. <a fancy="true">*/
-    }
   </style>
 </head>
 <body>
-  <h1 class="fancy">hello world!</h1>
-  <a href="#importance"> a:hover(suedo selector) webkit transition </a>
-  <p id="importance" contenteditable="true" title="contenteditable">
-    p with contenteditable,   id can be accessed like an anchor point #importance
-    <a href="#importance"> a  </a></p>
-  
-  <p>  
-    Html and css animation  http://code.bocoup.com/html5logo-3d/
-    Websockets
-    www.applelsiini.net/demo/websocket/html5.html
-  </p>
+  	<p>  
+<!--   <video controls="true" src="http://popcornjs.org/tryme.ogv" />  -->
+    <form>
+      
+    <input type="search" placeholder="Enter your serach here"/>
+    
+	<input autofocus="true" value="text field" />
+    <input type="checkbox" />
+    <input type="text" />
+
+    </form>
+    </p>
   
 </body>
 </html>
