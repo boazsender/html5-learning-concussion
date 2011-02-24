@@ -92,7 +92,8 @@ p img {
 
 hr {
   width: 100%;
-  display: none;
+  height: 10px;
+  visibility: hidden;
 }
 
 .fancy {
@@ -100,14 +101,34 @@ hr {
   font-style: italic
 }
 
+blockquote {
+  font-size: 30px;
+  font-family: georgia;
+  color: #999;
+}
+
+cite {
+  float: right;
+  margin-right: 20%;
+}
+
+table {
+  margin: 40px 0;
+  border-collapse: collapse;
+}
+th {
+  border-bottom: 1px solid #333;
+}
+th, td {
+  padding: 5px;
+}
+
 form {
-  position: relative;
-  top: 30px;
 }
 
 fieldset {
   width: 600px;
-  margin: 120px auto 0 auto;
+  margin: 0px auto 0 auto;
 }
 
 .text, fieldset {
