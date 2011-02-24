@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5 Learning Explosion</title>
+  <style>
+    .fancy {
+      font-style:italic;
+      font-family: georgia;
+      font-weight: normal;
+      color: #333;
+    }
+    
+    #importance {
+      line-height: 2;
+      word-spacing: 10px;
+    }
+    
+    a{
+      text-decoration:none;
+      color: #009;
+      -webkit-transition-properties: color;
+      -webkit-transition: .2s all;
+      -moz-transition: .2s all;  // for firefox
+    }
+    a:hover{
+      font-size: 200px;
+    }
+    
+    a.fancy:hover{
+      /* only a with class 'fancy' has this hover */
+    }
+    a[fancy]:hover{
+      /* fancy is custom attribute  e.g. <a fancy="true">*/
+    }
+
+
+	body { 
+	background: url(http://)
+} 		
+  </style>
+</head>
+<body>
+  <h1 class="fancy">hello world!</h1>
+  <a href="#importance"> a:hover(suedo selector) webkit transition </a>
+  <p id="importance" contenteditable="true" title="contenteditable">
+    p with contenteditable,   id can be accessed like an anchor point #importance
+    <a href="#importance"> a  </a></p>
+  
+  <p>  
+    Html and css animation  http://code.bocoup.com/html5logo-3d/
+    Websockets
+    www.applelsiini.net/demo/websocket/html5.html
+  </p>
+  
+</body>
+</html>
