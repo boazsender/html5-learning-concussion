@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document 626959 */
+
+
+body  {
+	font-family: Helvetica, sans-serif;
+	font-size:11px;
+	background-color: #e9edc3;
+	margin: 0px; /* d9531e dddab9  e45d27  it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	/* text-align: center;  this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector 999966 url(img/yello021.gif) */
+	color: #585747;
+	background-image:none;
+	background-repeat:repeat;
+	text-align:center;
+}
+
+
+#container { 
+width: 950px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar f3e09c */
+height: 681px;
+background-color:none;
+margin: 0 auto; 
+border: 1px solid  #e3e7b6;
+/*text-align: left; /* this overrides the text-align: center on the body element. */
+text-align:left;
+padding-top:20px;
+} 
+
+
+
+

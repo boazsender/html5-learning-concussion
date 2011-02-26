@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+html,body 
+{ min-height:100%; margin-bottom:1px; } /* Forces a vertical scrollbar on all pages, even those that wouldn't 
+need it, on Mozilla and Safari (where the vertical scrollbar belongs to the page and not the browser). */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url(images/navigation_bar/navbarsides.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 22px;
+	color: #f5e3ed;
+	overflow: -moz-scrollbars-vertical; /* Fixes NavBar shift in Firefox */
+}
+h1 {
+	font-size: 20px;
+	line-height: 23px;
+}
+h2 {
+	font-size: 16px;
+	line-height: 22px;
+}
+h3 {
+	font-size: 13px;
+	line-height: 22px;
+}
+
+
+/* ~~ Element/tag selectors ~~ */
+
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-left: 30px;
+	padding-right: 15px;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 3px
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+
+/* Container */
+
+.container {
+	width: 960px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	padding: 0px;
+}
+
+
+/* Header */
+
+.header {
+	width: 800px;
+	margin: 0 auto;
+	padding: 0px;
+}
+.header ul {
+	list-style-type: none;
+	text-align: left;
+	width: 800px;
+	height: 39px;
+	display:block;
+}
+.header ul li {
+	display:inline;
+	float: left;
+}
+#johnboveri_nav {
+	width: 181px;
+}
+#space_nav {
+	width: 83px;
+}
+#graphicdesign_nav {
+	width: 108px;
+}
+#illustration_nav {
+	width: 82px;
+}
+#DJOB_nav {
+	width: 161px;
+}
+#blog_nav {
+	width: 43px;
+}
+#resume_nav {
+	width: 64px;
+}
+#contact_nav {
+	width: 78px;
+}
+
+
+/* Columns and Content */
+
+.sidebar {
+	float: left;
+	width: 210px;
+	padding-top: 30px;
+	padding-left: 80px;
+}
+.content {
+	float: left;
+	width: 590px;
+	padding-top: 30px;
+	padding-right: 80px;
+}
+.gallerycontent {
+	float: left;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+.quotecontainer {
+	width: 550px;
+	padding-left: 20px;
+}
+.quote {
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #756E51;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #756E51;
+}
+.lowlight {
+	font-size: 12px;
+	font-style: italic;
+	color: #756f52;
+}
+label {
+	font-weight: bold;
+	color: #70A8C4;
+	display: block;
+}
+.center {
+	text-align: center;
+}
+
+
+/* Gallery Rows */
+
+.sixthumbnailrow {
+	list-style-type: none;
+	width: auto;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 26px;
+}
+ul.sixthumbnailrow li {
+	display:inline;
+	float: left;
+	width: 130px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	height: 136px;
+
+}
+.fourthumbnailrow {
+	list-style-type: none;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 174px;
+}
+ul.fourthumbnailrow li {
+	display:inline;
+	float: left;
+	width: 138px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	height: 136px;
+}
+
+
+/* Resume */
+
+.resumecontent {
+	color: #333;
+	padding-top: 30px;
+}
+.resumebackdrop {
+	background-color: #E3D5C8;
+	background-image: url(images/papertexture.jpg);
+	background-repeat: no-repeat;
+	width: 600px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+.resumeheadline {
+	width: 570px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+.resumecontent h1, .resumecontent h2, .resumecontent h3, .resumecontent ul {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding-left: 50px;
+	padding-right: 60px;
+}
+.resumecontent h1 {
+	border-bottom-style: double;
+	border-bottom-color: #333;
+	padding-top: 12px;
+	padding-bottom: 3px;
+	padding-left: 12px;
+}
+.resumecontent h2 {
+	padding-top: 14px;
+}
+.resumecontent ul {
+	padding-left: 80px;
+}
+.resumebackdrop ul li h3 {
+	padding-left: 0px;
+	padding-top: 8px;
+}
+
+
+/* Footer */
+
+.footer {
+	margin: 0 auto;
+	padding: 30px 0;
+	text-align: center;
+	color: #756E51;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+
+/* Contact */
+
+.box_round8 {
+     -moz-border-radius: 8px; /* FF1+ */
+  -webkit-border-radius: 8px; /* Saf3-4, iOS 1+, Android 1.5+ */
+          border-radius: 8px; /* Opera 10.5, IE9, Saf5, Chrome */
+		  background-color: #c4d6ef;
+		  background-image: -moz-linear-gradient(top, #c4d6ef, #eee); /* FF3.6 */
+		  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #c4d6ef),color-stop(1, #eee)); /* Saf4+, Chrome */
+		  background-image: -webkit-linear-gradient(#c4d6ef, #eee); /* Chrome 10+, Saf6 */
+		  background-image: linear-gradient(top, #c4d6ef, #eee);
+		            filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#c4d6ef', EndColorStr='#eee'); /* IE6–IE9 */
+}
+
+.box_round5 {
+     -moz-border-radius: 5px; /* FF1+ */
+  -webkit-border-radius: 5px; /* Saf3-4, iOS 1+, Android 1.5+ */
+          border-radius: 5px; /* Opera 10.5, IE9, Saf5, Chrome */
+		  background-color: #c4d6ef;
+		  background-image: -moz-linear-gradient(top, #c4d6ef, #eee); /* FF3.6 */
+		  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #c4d6ef),color-stop(1, #eee)); /* Saf4+, Chrome */
+		  background-image: -webkit-linear-gradient(#c4d6ef, #eee); /* Chrome 10+, Saf6 */
+		  background-image: linear-gradient(top, #c4d6ef, #eee);
+		            filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#c4d6ef', EndColorStr='#eee'); /* IE6–IE9 */
+}
+
+.box_transition {
+     -moz-transition: all 2s ease-out;  /* FF3.7+ */
+       -o-transition: all 2s ease-out;  /* Opera 10.5 */
+  -webkit-transition: all 2s ease-out;  /* Saf3.2+, Chrome */
+          transition: all 2s ease-out;  
+}
+
+
