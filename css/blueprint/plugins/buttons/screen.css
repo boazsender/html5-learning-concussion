@@ -11,6 +11,7 @@
 -------------------------------------------------------------- */
 
 a.button, button {
+  -webkit-border-radius: 9px;
   display:block;
   float:left;
   margin: 0.7em 0.5em 0.7em 0;
