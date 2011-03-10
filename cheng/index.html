@@ -1,65 +1,204 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-    fieldset {
-      width: 600px;
-      margin: 120px auto 0 auto;
-    }
-    
-    .text, fieldset {
-      border: 1px solid #c2c2c2;
-      -webkit-border-radius: 12px;
-      -moz-border-radius: 12px;
-      -o-border-radius: 12px;
-      border-radius: 12px; 
-      
-    }
-    .text {
-      outline: none;
-      font-size: 30px;
-      padding: 10px;
-      font-family: georgia;
-      color: #aaa
-    }
-    
-    .text:focus{
-      -webkit-box-shadow: 1px 1px 4px #999 inset;
-      -moz-box-shadow: 1px 1px 4px #999 inset;
-      -o-box-shadow: 1px 1px 4px #999 inset;
-      box-shadow: 1px 1px 4px #999 inset;
-      border-color: #555;
-    }
+    <link media="screen" rel="stylesheet" href="../css/blueprint/screen.css">
+    <link media="print" rel="stylesheet" href="../css/blueprint/print.css">
+    <link rel="stylesheet" href="../css/blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../css/blueprint/plugins/buttons/screen.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="../css/blueprint/plugins/link-icons/screen.css" type="text/css" media="screen" title="no title" charset="utf-8">
+     -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery.roundabout.js"></script>
+    <script src="https://github.com/boazsender/jQuery-Twitter-Plugin/raw/master/jquery.twitter.min.js"></script>
 
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+
+
+
+
+    <script>
+    
+    $(function(){
+	
+	$('abbr').hover( 
+		function(){
+			console.log('in');
+			//$(this).append("<button>Laugh out </button>");
+			$(this).css({ position : 'relative' });	
+			$('<button>', {
+				   html: 'titletext',
+				   css: {
+					position: 'absolute',
+					top: -10,
+					right: -10
+					
+					}
+				}).appendTo($(this))
+		}
+		,  function(){console.log('out')}
+	);
+
+
+      $('h1').click(function(){
+        $(this).animate({
+          marginLeft: -200,
+          opacity: 0
+        }, 500);
+      });
+      
+      $('#myRoundabout').roundabout();
+      
+      $(".twitter-posts").twitter('massart')
+      
+
+      var myLatlng = new google.maps.LatLng(42.2, -71.2);
+      var myOptions = {
+        zoom: 10,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+      }
+      var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+      var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(42.5, -71.2), 
+          map: map,
+          title:"Hello World!"
+      });   
+    })
+
+    </script>
+    <style>
+       .roundabout-holder { padding: 0; height: 5em; }
+       .roundabout-moveable-item { 
+          height: 4em; 
+          width: 4em; 
+          cursor: pointer;
+          background-color: #ffc;
+          border: 1px solid #999;
+       }
+       .roundabout-in-focus { cursor: auto; }
+       #map_canvas{
+         height: 200px;
+       }
+       .twitter-posts li       {margin-bottom: 10px; font-size: 12px; clear: both; list-style-type:none;}
+       .twitter-posts li img   {float:left; width: 48px; margin:0px 10px 10px 0px;border:1px solid #c2c2c2; -moz-box-shadow: 0px 0px 4px #c2c2c2;  -webkit-box-shadow: 0px 0px 4px #c2c2c2; box-shadow: 0px 0px 4px #c2c2c2;}
+       .twitter-posts li a     {text-decoration:none; color: #009;}
+       
     </style>
+
+    <!--[if lt IE 8]><link rel="stylesheet" href="../css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]--> 
+    <link rel="stylesheet" href="stails.css">
   </head>
   <body>
-    
-    <form method="get" action="">
-      <fieldset>
-        <legend>Mai Foarm</legend>
-        <h1>Schmancy input</h1>
-        <input class="text" name="text" type="text" value="text field">
+    <div class="container">
+      <header>
+        <ul class="nav listless">
+          <li>
+            <a href="">list item</a>
+            <ul>
+              <li><a href="">sub item</a></li>
+              <li><a href="">sub item 2</a></li>
+            </ul>
+          </li>
+          <li><a href="">another item</a></li>
+          <li><a href="">yet a third item</a></li>
+        </ul>
+      </header>
+      <section id="content">
+        <ul id="myRoundabout" class="listless">
+           <li>Box 1</li>
+           <li>Box 2</li>
+           <li>Box 3</li>
+           <li>Box 4</li>
+           <li>Box 5</li>
+        </ul>
+        <h1 class="alt">dis iz & & mai demoh   click me! </h1>
+        <h2>Dis ist mine lessr mportant thing</h2>
+        <p class="span-8 colborder">            <!-- colborder -- blueprint cheatsheet;  span-2 class doesn't work on seciton -->
+          <img class="span-2" src="http://boazsender.com/boaz-sender.jpg" />
+          This is my paragraph <span class="fancy">&</span> of text! in this paragraph ima talka bout <a href="http://google.com">Google</a>!
+          <a href="mailto:asd@asd.com">E Mail ME!</a>
+        </p>
+        
+        <div class="span-7 box">
+          <p>
+            This is my paragraph <span class="fancy">&</span> of text! <abbr title="Laugh Out Loud">LOL</abbr>. in this paragraph ima talka bout <a href="http://google.com">Google</a>!
+          </p>
+          <p>
+            Lorem shut the shizzle up rizzle sit amizzle, dizzle adipiscing pizzle. Things sapizzle velizzle, fizzle volutpizzle, pimpin' quis, we gonna chung vizzle, crazy. Pellentesque sheezy bow wow wow. Dope eros. check it out sizzle dapibus turpis tempus break it down. Maurizzle pellentesque nibh et shiznit. Shizzlin dizzle izzle tortizzle. Pellentesque eleifend for sure that's the shizzle. In hac crazy platea dictumst. Boofron dapibus. Curabitur tellus urna, pretizzle eu, mattis shiznit, eleifend vitae, nunc. Get down get down suscipit. Integer sempizzle phat sizzle purus.
+          </p>
+          <button>Call To Acton</button>
+        </div>
 
-        <h1>Forms Run Through</h1>
-        <input autofocus name="text" type="text" value="text field">
-        <input name="search" type="search" placeholder="search">
-        <input name="opt1" type="checkbox">
-        <input name="opt2" type="checkbox">
-        <input name="opt3" type="checkbox">
-        <input name="samename" type="radio">
-        <input name="samename" type="radio">
-        <input name="samename" type="radio">
-        <select name="opt7">
-          <option value="val1">opt 1</option>
-          <option value="val2">opt 2</option>
-          <option value="val3">opt 3</option>
-        </select>
-        <input name="howmuch" type="range">
-        <input type="submit">
-      </fieldset>
-    </form>    
+        <div class="span-8 last">
+          <ul class="listless">
+            <li>
+              list item
+              <ul>
+                <li>sub item</li>
+              </ul>
+            </li>
+            <li>another item</li>
+          </ul>
+          <p>
+            Lorem shut the shizzle up rizzle sit amizzle, dizzle adipiscing pizzle. Things sapizzle velizzle, fizzle volutpizzle, pimpin' quis, we gonna chung vizzle, crazy. Pellentesque sheezy bow wow wow. Dope eros. check it out sizzle dapibus turpis tempus break it down. Maurizzle pellentesque nibh et shiznit. Shizzlin dizzle izzle tortizzle. Pellentesque eleifend for sure that's the shizzle. In hac crazy platea dictumst. Boofron dapibus. Curabitur tellus urna, pretizzle eu, mattis shiznit, eleifend vitae, nunc. Get down get down suscipit. Integer sempizzle phat sizzle purus.
+          </p>
+        </div>
+        <div id="map_canvas" class="span-24"></div>
+        <hr>
+        <div class="twitter-posts"></div>
+        <hr>
+        <p>
+          I'm talking about all this different stuff in a paragraph!
+        </p>
+        <blockquote>
+          HTML5 is the future
+        </blockquote>
+        <cite>
+          -Boaz
+        </cite>
+        <hr>
+        <video src="http://popcornjs.org/tryme.ogv" controls>
+        </video>
+        <table>
+          <tr>
+            <th>Age</th>
+            <th>Size</th>
+            <th>Gender</th>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>7</td>
+            <td>18</td>
+          </tr>
+        </table>
 
+        <form method="get" action="">
+          <fieldset>
+            <legend>Mai Foarm</legend>
+            <h1>Schmancy input</h1>
+            <input class="text" name="text" type="text" value="text field">
+
+            <h1>Forms Run Through</h1>
+            <input name="title" type="text" value="text field">
+            <input name="search" type="search" placeholder="search">
+            <input name="opt1" type="checkbox">
+            <input name="opt2" type="checkbox">
+            <input name="opt3" type="checkbox">
+            <input name="opt4" type="radio">
+            <input name="opt4" type="radio">
+            <input name="opt4" type="radio">
+            <select name="opt7">
+              <option value="val1">opt 1</option>
+              <option value="val2">opt 2</option>
+              <option value="val3">opt 3</option>
+            </select>
+            <input name="howmuch" type="range">
+            <input type="submit">
+          </fieldset>
+        </form>    
+      </section>
+    </div>
   </body>
 </html>
 
