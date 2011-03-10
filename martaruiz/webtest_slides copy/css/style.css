@@ -1,0 +1,109 @@
+/*
+                                __      _ _                   _   
+                               / _|    | (_)                 | |  
+ _ __ ___   __ _ _ __ ___ ___ | |_ ___ | |_  ___   _ __   ___| |_ 
+| '_ ` _ \ / _` | '__/ __/ _ \|  _/ _ \| | |/ _ \ | '_ \ / _ \ __|
+| | | | | | (_| | | | (_| (_) | || (_) | | | (_) || | | |  __/ |_ 
+|_| |_| |_|\__,_|_|  \___\___/|_| \___/|_|_|\___(_)_| |_|\___|\__|
+                                                                  
+*/
+
+/* BASIC RESET */
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{margin:0; padding:0;}
+
+/* HTML ELEMENTS */
+body { background-color:#768e3a; font:40% Verdana, sans-serif; letter-spacing:1; }
+
+/* COMMON CLASSES */
+.break { clear:both; }
+
+/* HEADER */
+#header { height:681px; }
+.headerimg { background-position: center top; background-repeat: no-repeat; width:100%; height:681px; position:absolute; }
+
+/* HEADERHOME MARTA */
+#headerhome { height:681px; background-image:url(../images/kumbhak_home.jpg); background-repeat: no-repeat;  }
+.headerhomeimg { background-position: center top; background-repeat: no-repeat; width:100%; height:681px; position:absolute; }
+
+/* HEADERAYUR MARTA */
+#headerayur { height:681px; background-image:url(../images/kumbhak_ayurveda.jpg); background-repeat: no-repeat;  }
+.headerayurimg { background-position: center top; background-repeat: no-repeat; width:100%; height:681px; position:absolute; }
+
+/* HEADERFUR MARTA */
+#headerfur{ height:681px; background-image:url(../images/kumbhak_studies.jpg); background-repeat: no-repeat;  }
+.headerfurimg { background-position: center top; background-repeat: no-repeat; width:100%; height:681px; position:absolute; }
+
+
+/* HEADERMED MARTA */
+#headermed { height:681px; background-image:url(../images/kumbhak_meditation.jpg); background-repeat: no-repeat;  }
+.headermedimg { background-position: center top; background-repeat: no-repeat; width:100%; height:681px; position:absolute; }
+
+
+/* HEADERCL MARTA */
+#headercl { height:681px; background-image:url(../images/kumbhak_class.jpg); background-repeat: no-repeat;  }
+.headerclimg { background-position: center top; background-repeat: no-repeat; width:100%; height:681px; position:absolute; }
+
+
+/* HEADERSTATIC MARTA */
+#headerw { height:681px; background-image:url(../images/kumbhak_workshop.jpg); background-repeat: no-repeat;  }
+.headerwimg { background-position: center top; background-repeat: no-repeat; width:100%; height:681px; position:absolute; }
+
+/* HEADERSTEST MARTA */
+#headertest { height:681px; background-image:url(../images/kumbhak_test.jpg); background-repeat: no-repeat;  }
+.headertestimg { background-position: center top; background-repeat: no-repeat; width:100%; height:681px; position:absolute; }
+
+
+
+/* NAVIGATION */
+#nav-outer { height:120px; padding-top:10px; position:relative; top:24px; background-image:url("../images/headerbg2.png"); }
+#navigation { height:110px; width:960px; margin:0 auto; background-image:url("../images/logo2.png"); background-position:top left; background-repeat:no-repeat; }
+
+/* SEARCH 
+#search { background-color:#051733; float:right; width:220px; padding:10px; }
+#searchtxt { padding:3px; width:150px; }
+#searchbtn { border:1px solid #eee !important; background-color:#CD2B3A; color:#eee; padding:3px; margin-left:5px; } */
+
+/* MENU */
+#menu { position:relative; top:47px; margin-left: 240px; }
+#menu ul { list-style:none; }
+#menu ul li { display:inline; font-variant:small-caps; font-size:12px; }
+#menu ul li a { color:white; text-decoration:none; font-weight:bold; padding-right:20px; }
+#menu ul li a:hover { text-decoration:underline; }
+
+/* HEADER TEXT */
+#headertxt { width:960px; margin:0 auto; clear:both; position:relative; top:365px; }
+#firstline { background-image:url("../images/textbg.png"); color:#333; font-size:12px; font-family:Georgia, Times, serif;   padding:4px 13px 7px; float:left; display:block; margin-left: 45px; }
+#secondline { background-image:url("../images/textbg.png"); color:#CD2B3A; text-decoration:none; font-size:19px;font-family:Georgia, Times, serif; padding:2px 13px 8px; float:left; margin-left: 45px; display:block; clear:both; }
+#secondline:hover { text-decoration:underline; color:#7F000C;  }
+
+.pictured { background-color:#4e612e; color:#FFF; font-size:12px; padding:9px 16px; text-transform:uppercase; float:left; display:block; clear:both; margin-top:10px; margin-left: 45px; }
+.pictured a { font-size:16px; font-style:normal; font-weight:bold; font-variant:small-caps; letter-spacing:0; text-transform:none; color:#FFF; text-decoration:none; }
+.pictured a:hover { text-decoration:underline; }
+
+/* CONTROLS */
+.btn { height:32px; width:32px; float:left; cursor:pointer; }
+#back { background-image:url("../images/btn_back.png"); }
+#next { background-image:url("../images/btn_next.png"); }
+#control { background-image:url("../images/btn_pause.png"); }
+
+/* HEADER HAVIGATION */
+#headernav-outer { position:relative; top:500px; margin:0 auto; width:930px; }
+#headernav { padding-left:764px; }
+
+/* CONTENT */
+#content { color:#575757; background-color:#eee; }
+#content p { padding:10px 20px; font-size:11px; width:930px; margin:0 auto; }
+#content p a { text-decoration:none; color:#CD2B3A; }
+#content p a:hover { text-decoration:underline; color:#7F000C; }
+
+/* CONTENTINNER MARTA */
+#contentinner { color:#575757; background-color:#eee; margin-top: 551px; }
+#contentinner p { padding:10px 20px; font-size:12px; width:930px; margin:0 auto; }
+#contentinner p a { text-decoration:none; color:#CD2B3A; }
+#contenttwo p a:hover { text-decoration:underline; color:#7F000C; }
+
+/* FOOTER MARTA */
+#footer { color:#585747; background-color:#eee; }
+#footer p { padding:10px 20px; font-size:10px; width:930px; margin:0 auto; text-align:left; }
+#footer p a { text-decoration:none; color:#CD2B3A; }
+#footer p a:hover { text-decoration:underline; color:#7F000C; }

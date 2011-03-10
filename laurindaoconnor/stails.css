@@ -1,0 +1,116 @@
+body {
+  font-family: sans-serif;
+}
+.nav {
+  cursor: pointer;
+  height: 50px;
+}
+.nav li {
+  float: left;
+  margin-right: 10px;
+  width: 140px;
+}
+.nav li ul li {
+  float: none;
+  margin: 10px 0;  
+}
+.nav ul {
+  padding-left: 0px;
+  float: left;
+  height: 0px;
+  overflow: hidden;
+  background: white;
+  z-index: 2;
+  position: relative;
+  -webkit-transition: all .5s;
+}
+.nav li:hover ul {
+  text-indent: 0px;
+  height: 100px;
+}
+
+.nav li a {
+  padding: 5px;
+}
+
+.listless, .listless ul {
+  list-style-type: none;
+}
+
+.inline li {
+  display: inline;
+}
+
+p img {
+  width: 40px;
+  float: left;
+  margin: 0 10px 10px 0;
+  -webkit-box-shadow: 0px 0px 5px #333;
+  -webkit-border-radius: 8px;
+}
+
+
+hr {
+  width: 100%;
+  height: 10px;
+  visibility: hidden;
+}
+
+.fancy {
+  font-family: Baskerville, "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+  font-style: italic
+}
+
+blockquote {
+  font-size: 30px;
+  font-family: georgia;
+  color: #999;
+}
+
+cite {
+  float: right;
+  margin-right: 20%;
+}
+
+table {
+  margin: 40px 0;
+  border-collapse: collapse;
+}
+th {
+  border-bottom: 1px solid #333;
+}
+th, td {
+  padding: 5px;
+}
+
+form {
+}
+
+fieldset {
+  width: 600px;
+  margin: 0px auto 0 auto;
+}
+
+.text, fieldset {
+  border: 1px solid #c2c2c2;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px; 
+  
+}
+.text {
+  outline: none;
+  font-size: 30px;
+  padding: 10px;
+  font-family: georgia;
+  color: #aaa
+}
+
+.text:focus{
+  -webkit-box-shadow: 1px 1px 4px #999 inset;
+  -moz-box-shadow: 1px 1px 4px #999 inset;
+  -o-box-shadow: 1px 1px 4px #999 inset;
+  box-shadow: 1px 1px 4px #999 inset;
+  border-color: #555;
+}
