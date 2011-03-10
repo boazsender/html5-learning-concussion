@@ -8,18 +8,15 @@
     <!-- <link rel="stylesheet" href="../css/blueprint/plugins/link-icons/screen.css" type="text/css" media="screen" title="no title" charset="utf-8">
      -->
     <script src="../js/jquery.js"></script>
+    <script src="../js/jquery.tooltop.min.js"></script>
     <script src="../js/jquery.roundabout.js"></script>
     <script src="https://github.com/boazsender/jQuery-Twitter-Plugin/raw/master/jquery.twitter.min.js"></script>
-
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
-
-
-
-
     <script>
     
     $(function(){
 
+      // Som crazy jake wearies
       $('h1').click(function(){
         $(this).animate({
           marginLeft: -200,
@@ -27,11 +24,13 @@
         }, 500);
       });
       
+      // Initializing the Roundabout
       $('#myRoundabout').roundabout();
       
+      // Render Tweets
       $(".twitter-posts").twitter('massart')
       
-
+      // Doin the map
       var myLatlng = new google.maps.LatLng(42.2, -71.2);
       var myOptions = {
         zoom: 10,
@@ -44,7 +43,11 @@
           position: new google.maps.LatLng(42.5, -71.2), 
           map: map,
           title:"Hello World!"
-      });   
+      });
+      
+      
+      $('abbr').tooltop()
+      
     })
 
     </script>
@@ -72,10 +75,12 @@
   </head>
   <body>
     <div class="container">
+      
       <header>
+
         <ul class="nav listless">
           <li>
-            <a href="">list item</a>
+            <a href="" title="ASDsaa">list item</a>
             <ul>
               <li><a href="">sub item</a></li>
               <li><a href="">sub item 2</a></li>
@@ -85,6 +90,7 @@
           <li><a href="">yet a third item</a></li>
         </ul>
       </header>
+      
       <section id="content">
         <ul id="myRoundabout" class="listless">
            <li>Box 1</li>
@@ -107,7 +113,7 @@
             This is my paragraph <span class="fancy">&</span> of text! <abbr title="Laugh Out Loud">LOL</abbr>. in this paragraph ima talka bout <a href="http://google.com">Google</a>!
           </p>
           <p>
-            Lorem shut the shizzle up rizzle sit amizzle, dizzle adipiscing pizzle. Things sapizzle velizzle, fizzle volutpizzle, pimpin' quis, we gonna chung vizzle, crazy. Pellentesque sheezy bow wow wow. Dope eros. check it out sizzle dapibus turpis tempus break it down. Maurizzle pellentesque nibh et shiznit. Shizzlin dizzle izzle tortizzle. Pellentesque eleifend for sure that's the shizzle. In hac crazy platea dictumst. Boofron dapibus. Curabitur tellus urna, pretizzle eu, mattis shiznit, eleifend vitae, nunc. Get down get down suscipit. Integer sempizzle phat sizzle purus.
+            <abbr title="The first word in cicero's famous treatise on typographic press">Lorem</abbr> shut the shizzle up rizzle sit amizzle, dizzle adipiscing pizzle. Things sapizzle velizzle, fizzle volutpizzle, pimpin' quis, we gonna chung vizzle, crazy. Pellentesque sheezy bow wow wow. Dope eros. check it out sizzle dapibus turpis tempus break it down. Maurizzle pellentesque nibh et shiznit. Shizzlin dizzle izzle tortizzle. Pellentesque eleifend for sure that's the shizzle. In hac crazy platea dictumst. Boofron dapibus. Curabitur tellus urna, pretizzle eu, mattis shiznit, eleifend vitae, nunc. Get down get down suscipit. Integer sempizzle phat sizzle purus.
           </p>
           <button>Call To Acton</button>
         </section>

@@ -14,13 +14,13 @@
      <script>
 
       $(function(){
-
         $('h1').click(function(){
           $(this).animate({
             marginLeft: -200,
             opacity: 0
           }, 500);
         });
+      });
 
       </script>
     <!-- Import fancy-type plugin. -->  
@@ -28,6 +28,9 @@
 </head>  
 <body>
   <div class="container">
+
+    <div id="target"></div>
+
     <header>
       <div class="span-18">
         <ul>
