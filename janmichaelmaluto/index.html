@@ -1,20 +1,99 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="../css/blueprint/src/reset.css">
+	<link rel="stylesheet" href="../css/blueprint/src/typography.css">
+	<link rel="stylesheet" href="../css/blueprint/src/forms.css">
+	<link rel="stylesheet" href="../css/blueprint/src/grid.css">
+	<!-- ><link rel="stylesheet" href="stails.css"> -->
   </head>
   <body>
-	
-	<form>
-		<input name="text"autofocus="true" type="text" value="TextField">
-		<br><input name "search" type="search" placeholder="Search">
-		<br><input type="checkbox">Hi
-		<br><select>
-			<option value="opt 7">option 1</option>
-			<option >option 2</option>
-			<option>option 3</option>
-		</select>
-		
-	</form>
-	
+    <header>
+      <ul class="nav listless">
+        <li>
+          <a href="">list item</a>
+          <ul>
+            <li><a href="">sub item</a></li>
+            <li><a href="">sub item 2</a></li>
+          </ul>
+        </li>
+        <li><a href="">another item</a></li>
+        <li><a href="">yet a third item</a></li>
+      </ul>
+    </header>
+    <section id="content">
+      <h1>dis iz mai demoh</h1>
+      <h2>Dis ist mine lessr mportant thing</h2>
+      <p class="col">
+        <img src="http://boazsender.com/boaz-sender.jpg">
+        This is my paragraph <span class="fancy">&</span> of text! in this paragraph ima talka bout <a href="http://google.com">Google</a>!
+      </p>
+      <p class="col">
+        This is my paragraph <span class="fancy">&</span> of text! <abbr title="Laugh Out Loud">LOL</abbr>. in this paragraph ima talka bout <a href="http://google.com">Google</a>!
+      </p>
+      
+      <ul class="col listless">
+        <li>
+          list item
+          <ul>
+            <li>sub item</li>
+          </ul>
+        </li>
+        <li>another item</li>
+      </ul>
+
+      <hr>
+      <p>
+        I'm talking about all this different stuff in a paragraph!
+      </p>
+      <blockquote>
+        HTML5 is the future
+      </blockquote>
+      <cite>
+        -Boaz
+      </cite>
+      <hr>
+      <video src="http://popcornjs.org/tryme.ogv" controls>
+      </video>
+      <table>
+        <tr>
+          <th>Age</th>
+          <th>Size</th>
+          <th>Gender</th>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>7</td>
+          <td>18</td>
+        </tr>
+      </table>
+
+      <form method="get" action="">
+        <fieldset>
+          <legend>Mai Foarm</legend>
+          <h1>Schmancy input</h1>
+          <input class="text" name="text" type="text" value="text field">
+
+          <h1>Forms Run Through</h1>
+          <input name="text" type="text" value="text field">
+          <input name="search" type="search" placeholder="search">
+          <input name="opt1" type="checkbox">
+          <input name="opt2" type="checkbox">
+          <input name="opt3" type="checkbox">
+          <input name="opt4" type="radio">
+          <input name="opt4" type="radio">
+          <input name="opt4" type="radio">
+          <select name="opt7">
+            <option value="val1">opt 1</option>
+            <option value="val2">opt 2</option>
+            <option value="val3">opt 3</option>
+          </select>
+          <input name="howmuch" type="range">
+          <input type="submit">
+        </fieldset>
+      </form>    
+    </section>
   </body>
 </html>
+
+
